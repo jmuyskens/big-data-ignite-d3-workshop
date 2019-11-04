@@ -1,6 +1,7 @@
 library(tidyverse)
 library(here)
 library(ISOcodes)
+library(jsonlite)
 
 here()
 
@@ -35,3 +36,4 @@ oecd <-
   filter(year >= 1970, year <= 2015)
 
 write_csv(oecd, "data/oecd.csv", na = "")
+write_json(oecd, "data/oecd.json")
