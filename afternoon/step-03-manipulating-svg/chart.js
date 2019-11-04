@@ -1,4 +1,3 @@
-// Margin convention
 let width = 300
 let height = 400
 
@@ -7,10 +6,8 @@ d3.selectAll('svg').remove()
 
 let svg = d3.select('div#chart')
   .append('svg')
-    .attr('width', width + margin.right + margin.left)
-    .attr('height', height + margin.top + margin.bottom)
-  .append('g')
-    .attr('transform', `translate(${margin.left}, ${margin.top})`)
+    .attr('width', width)
+    .attr('height', height)
 
 let snowBody = svg.append('g')
   .attr('fill', 'white')
